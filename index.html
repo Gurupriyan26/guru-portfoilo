@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gurupriyan K | Full-Stack Developer & AI/ML Engineer</title>
+  <meta name="description" content="Portfolio of Gurupriyan K — Full-Stack Developer, AI/ML Engineer, and Data Dashboard Specialist with hands-on experience in Next.js, Supabase, Leaflet.js, Python, YOLOv8, and Embedded Systems." />
+  <meta name="keywords" content="Gurupriyan K, Full Stack Developer, AI ML Engineer, Data Dashboards, Leaflet.js, Next.js, Supabase, YOLOv8, Arduino, Portfolio, Tamil Nadu" />
+  <meta name="author" content="Gurupriyan K" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gurupriyan K | Full-Stack Developer & AI/ML Engineer" />
+  <meta property="og:description" content="Explore production dashboards, AI/ML models, computer vision systems, and embedded robotics built by Gurupriyan K." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Dynamic Particle Canvas Background -->
+  <canvas id="particle-canvas" class="particle-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Gurupriyan K Home">
+        <div class="logo-box">
+          <span class="logo-text">GP</span>
+          <span class="logo-pulse"></span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">GURUPRIYAN K</span>
+          <span class="brand-status"><span class="status-dot"></span> Open to Work</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#interactive-demo" class="nav-item">Live Demo</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <!-- Nav CTA Actions -->
+      <div class="nav-actions">
+        <button id="resume-btn" class="btn btn-secondary btn-sm" aria-label="View Resume">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <a href="#about" class="mobile-nav-item">About</a>
+      <a href="#skills" class="mobile-nav-item">Skills</a>
+      <a href="#projects" class="mobile-nav-item">Projects</a>
+      <a href="#interactive-demo" class="mobile-nav-item">Live Demo</a>
+      <a href="#experience" class="mobile-nav-item">Experience</a>
+      <a href="#education" class="mobile-nav-item">Education</a>
+      <a href="#contact" class="mobile-nav-item">Contact</a>
+      <div class="mobile-drawer-actions">
+        <button id="mobile-resume-btn" class="btn btn-secondary w-full">
+          <i class="fa-solid fa-file-pdf"></i> View Resume
+        </button>
+        <a href="#contact" class="btn btn-primary w-full mobile-nav-close">
+          Get in Touch <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-bolt-lightning text-accent"></i>
+            <span>Engineering Student &bull; B.Tech AI &amp; ML (2022–2026)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Gurupriyan K</span>
+          </h1>
+
+          <div class="typing-container">
+            <span class="typing-prefix">Specialized in</span>
+            <span id="typing-text" class="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Full-stack developer and AI/ML engineer with hands-on experience building 
+            <strong>production data dashboards</strong> and <strong>applied AI/embedded systems</strong>. 
+            Recently shipped a live government analytics platform across all <strong>38 districts of Tamil Nadu</strong> 
+            — moving seamlessly between backend schemas, interactive maps, and computer vision models.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <span>View Flagship Projects</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#interactive-demo" class="btn btn-glass btn-lg">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Explore TN Map Sandbox</span>
+            </a>
+            <button id="hero-resume-btn" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-download"></i>
+              <span>Resume</span>
+            </button>
+          </div>
+
+          <!-- Hero KPI Stats Grid -->
+          <div class="hero-stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" data-target="38">0</div>
+              <div class="stat-label">Districts Mapped in TN</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="3">0</div>
+              <div class="stat-label">Core Applied Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="8">0</div>
+              <div class="stat-label">KPI Metrics Engine</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="100">0</div>
+              <div class="stat-suffix">%</div>
+              <div class="stat-label">Vercel &amp; Cloud Deployed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Tech Hologram Card -->
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-card">
+              <div class="avatar-image-box">
+                <img src="assets/images/avatar.jpg" alt="Gurupriyan K" class="avatar-img" />
+                <div class="avatar-overlay"></div>
+              </div>
+              
+              <div class="avatar-badge-live">
+                <span class="pulse-ring"></span>
+                <span class="pulse-core"></span>
+                <span>Active Developer &amp; AI Builder</span>
+              </div>
+
+              <div class="avatar-details">
+                <div class="avatar-name">Gurupriyan K</div>
+                <div class="avatar-role">Full-Stack &bull; AI/ML &bull; Embedded</div>
+                <div class="avatar-location">
+                  <i class="fa-solid fa-location-dot"></i> Cuddalore / Coimbatore, India
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-nextjs">
+              <i class="fa-brands fa-react"></i> Next.js
+            </div>
+            <div class="floating-badge badge-python">
+              <i class="fa-brands fa-python"></i> Python &bull; YOLOv8
+            </div>
+            <div class="floating-badge badge-supabase">
+              <i class="fa-solid fa-database"></i> Supabase / SQL
+            </div>
+            <div class="floating-badge badge-leaflet">
+              <i class="fa-solid fa-map"></i> Leaflet.js GIS
+            </div>
+            <div class="floating-badge badge-arduino">
+              <i class="fa-solid fa-microchip"></i> Arduino &bull; IPM
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> About Me</span>
+          <h2 class="section-title">Bridging Data Dashboards, AI Intelligence &amp; Physical Hardware</h2>
+          <p class="section-subtitle">
+            I specialize in crafting full-lifecycle applications — transforming raw relational data and complex machine learning algorithms into intuitive, ultra-responsive web experiences.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card">
+            <div class="about-icon-box cyan-gradient">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="about-card-title">Production Data Dashboards</h3>
+            <p class="about-card-text">
+              Expert in building high-impact dashboards with KPI cards, multi-tier drilldown navigation (District &rarr; Block &rarr; School), and dynamic choropleth heatmaps with PostgreSQL &amp; Supabase backend models.
+            </p>
+            <ul class="about-pill-list">
+              <li>Next.js</li>
+              <li>Leaflet.js</li>
+              <li>Supabase (PostgreSQL)</li>
+              <li>Choropleth Heatmaps</li>
+            </ul>
+          </div>
+
+          <div class="about-card glass-card">
+            <div class="about-icon-box purple-gradient">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3 class="about-card-title">Applied AI &amp; Computer Vision</h3>
+            <p class="about-card-text">
+              Trained and evaluated YOLOv8 vision models for real-time surveillance and safety detection. Proficient in applied GenAI workflows, prompt engineering, and intelligent algorithmic pipelines.
+            </p>
+            <ul class="about-pill-list">
+              <li>Python</li>
+              <li>YOLOv8</li>
+              <li>Computer Vision</li>
+              <li>Prompt Engineering</li>
+            </ul>
+          </div>
+
+          <div class="about-card glass-card">
+            <div class="about-icon-box emerald-gradient">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="about-card-title">Embedded Systems &amp; Robotics</h3>
+            <p class="about-card-text">
+              Designed autonomous robotic navigation using Arduino Nano and sensor fusion. Implemented the Inverted Pendulum Method (IPM) for real-time obstacle avoidance and dynamic trajectory response.
+            </p>
+            <ul class="about-pill-list">
+              <li>Arduino Nano</li>
+              <li>Embedded C</li>
+              <li>Sensor Integration</li>
+              <li>IPM Navigation</li>
+            </ul>
+          </div>
+
+          <div class="about-card glass-card">
+            <div class="about-icon-box amber-gradient">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <h3 class="about-card-title">Cloud Deployment &amp; Vibe Prototyping</h3>
+            <p class="about-card-text">
+              Hands-on experience with AWS EC2 cloud infrastructure, Vercel CI/CD pipelines, Figma/Framer wireframing, and rapid AI-assisted prototyping for ultra-fast product cycles.
+            </p>
+            <ul class="about-pill-list">
+              <li>AWS EC2</li>
+              <li>Vercel CI/CD</li>
+              <li>Figma &amp; Framer</li>
+              <li>Git &amp; GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="section skills-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Technical Arsenal</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">
+            A comprehensive overview of my technical stack across full-stack development, spatial visualization, AI models, and embedded engineering.
+          </p>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">All Tech</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; Web</button>
+          <button class="filter-btn" data-filter="data">Data &amp; Maps</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Computer Vision</button>
+          <button class="filter-btn" data-filter="embedded">Embedded &amp; IoT</button>
+          <button class="filter-btn" data-filter="tools">Cloud &amp; Design Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Full-Stack & Web -->
+          <div class="skill-item glass-card" data-category="fullstack">
+            <div class="skill-icon-header">
+              <i class="fa-brands fa-react text-cyan"></i>
+              <span class="skill-level-badge">Framework</span>
+            </div>
+            <h4 class="skill-title">Next.js &amp; React</h4>
+            <p class="skill-desc">SSR, App Router, dynamic API routes, performant reactive interfaces</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="fullstack">
+            <div class="skill-icon-header">
+              <i class="fa-brands fa-python text-amber"></i>
+              <span class="skill-level-badge">Language</span>
+            </div>
+            <h4 class="skill-title">Python</h4>
+            <p class="skill-desc">Data processing, AI/ML pipelines, automated workflows &amp; scripting</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="fullstack">
+            <div class="skill-icon-header">
+              <i class="fa-brands fa-js text-amber"></i>
+              <span class="skill-level-badge">Core</span>
+            </div>
+            <h4 class="skill-title">JavaScript &amp; TypeScript</h4>
+            <p class="skill-desc">Modern ES6+, async architecture, state management, DOM mastery</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="fullstack">
+            <div class="skill-icon-header">
+              <i class="fa-brands fa-html5 text-rose"></i>
+              <span class="skill-level-badge">Frontend</span>
+            </div>
+            <h4 class="skill-title">HTML5 &amp; Modern CSS3</h4>
+            <p class="skill-desc">Glassmorphism, custom design systems, responsive flex/grid layouts</p>
+          </div>
+
+          <!-- Data & Visualization -->
+          <div class="skill-item glass-card" data-category="data">
+            <div class="skill-icon-header">
+              <i class="fa-solid fa-database text-emerald"></i>
+              <span class="skill-level-badge">Database</span>
+            </div>
+            <h4 class="skill-title">Supabase &amp; PostgreSQL</h4>
+            <p class="skill-desc">Normalized schemas, Row Level Security, real-time subscriptions, SQL</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="data">
+            <div class="skill-icon-header">
+              <i class="fa-solid fa-map-location-dot text-indigo"></i>
+              <span class="skill-level-badge">GIS &amp; Viz</span>
+            </div>
+            <h4 class="skill-title">Leaflet.js &amp; GeoJSON</h4>
+            <p class="skill-desc">Interactive district maps, choropleth heatmaps, custom tile layers</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="data">
+            <div class="skill-icon-header">
+              <i class="fa-solid fa-table-columns text-purple"></i>
+              <span class="skill-level-badge">UI Analytics</span>
+            </div>
+            <h4 class="skill-title">KPI Cards &amp; Dashboards</h4>
+            <p class="skill-desc">Color-coded status systems, metric aggregations, multi-tier drilldown</p>
+          </div>
+
+          <!-- AI & Computer Vision -->
+          <div class="skill-item glass-card" data-category="ai">
+            <div class="skill-icon-header">
+              <i class="fa-solid fa-eye text-cyan"></i>
+              <span class="skill-level-badge">Vision AI</span>
+            </div>
+            <h4 class="skill-title">YOLOv8 &amp; Computer Vision</h4>
+            <p class="skill-desc">Object detection, dataset annotation, model training &amp; evaluation</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="ai">
+            <div class="skill-icon-header">
+              <i class="fa-solid fa-wand-magic-sparkles text-purple"></i>
+              <span class="skill-level-badge">GenAI</span>
+            </div>
+            <h4 class="skill-title">Prompt Engineering &amp; LLMs</h4>
+            <p class="skill-desc">Applied GenAI workflows, prompt optimization, AI assistant integration</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="ai">
+            <div class="skill-icon-header">
+              <i class="fa-solid fa-network-wired text-indigo"></i>
+              <span class="skill-level-badge">Machine Learning</span>
+            </div>
+            <h4 class="skill-title">ML Algorithms &amp; Pipelines</h4>
+            <p class="skill-desc">Supervised learning, preprocessing, feature scaling, model benchmarking</p>
+          </div>
+
+          <!-- Embedded & Hardware -->
+          <div class="skill-item glass-card" data-category="embedded">
+            <div class="skill-icon-header">
+              <i class="fa-solid fa-microchip text-emerald"></i>
+              <span class="skill-level-badge">Microcontrollers</span>
+            </div>
+            <h4 class="skill-title">Arduino Nano &amp; Embedded C</h4>
+            <p class="skill-desc">Hardware interfacing, sensor integration, real-time motor control</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="embedded">
+            <div class="skill-icon-header">
+              <i class="fa-solid fa-compass text-amber"></i>
+              <span class="skill-level-badge">Robotics</span>
+            </div>
+            <h4 class="skill-title">Inverted Pendulum Method (IPM)</h4>
+            <p class="skill-desc">Autonomous obstacle avoidance algorithms, real-time sensor reaction</p>
+          </div>
+
+          <!-- Cloud & Tools -->
+          <div class="skill-item glass-card" data-category="tools">
+            <div class="skill-icon-header">
+              <i class="fa-brands fa-aws text-amber"></i>
+              <span class="skill-level-badge">Cloud</span>
+            </div>
+            <h4 class="skill-title">AWS Infrastructure (EC2)</h4>
+            <p class="skill-desc">Cloud instance setup, server hosting, environment provisioning</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="tools">
+            <div class="skill-icon-header">
+              <i class="fa-brands fa-github text-white"></i>
+              <span class="skill-level-badge">DevOps</span>
+            </div>
+            <h4 class="skill-title">Git, GitHub &amp; Vercel CI/CD</h4>
+            <p class="skill-desc">Version control, continuous automated deployment, documentation</p>
+          </div>
+
+          <div class="skill-item glass-card" data-category="tools">
+            <div class="skill-icon-header">
+              <i class="fa-brands fa-figma text-rose"></i>
+              <span class="skill-level-badge">Design</span>
+            </div>
+            <h4 class="skill-title">Figma, Framer &amp; Vibe Coding</h4>
+            <p class="skill-desc">Wireframing, interactive UI mockups, AI-assisted rapid prototyping</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Portfolio Showcase</span>
+          <h2 class="section-title">Featured Production Projects</h2>
+          <p class="section-subtitle">
+            Deep-dive into live government-facing data dashboards, autonomous robotics systems, and computer vision models.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Vedasakthi Dashboard (Flagship) -->
+          <article class="project-card flagship-card glass-card">
+            <div class="project-image-container">
+              <img src="assets/images/vedasakthi.jpg" alt="Vedasakthi Tamil Nadu Dashboard Preview" class="project-img" />
+              <div class="project-image-overlay">
+                <div class="project-links-floating">
+                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="vedasakthi">
+                    <i class="fa-solid fa-circle-info"></i> Project Deep Dive
+                  </button>
+                  <a href="#interactive-demo" class="btn btn-secondary btn-sm">
+                    <i class="fa-solid fa-play"></i> Live Sandbox
+                  </a>
+                </div>
+              </div>
+              <div class="project-pill-featured">
+                <i class="fa-solid fa-star"></i> Flagship Live Project (2026)
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="project-category"><i class="fa-solid fa-building-columns"></i> Gov-Tech &amp; Data Analytics</span>
+                <span class="project-timeline">20-Day Build Cycle</span>
+              </div>
+
+              <h3 class="project-title">
+                Vedasakthi &mdash; Tamil Nadu Government Schools Education Dashboard
+              </h3>
+
+              <p class="project-description">
+                Rebuilt a Minister's Command View analytics dashboard on a modern stack, turning a static HTML prototype into a live, production-grade system covering <strong>all 38 districts of Tamil Nadu</strong> with school-level drilldowns.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="highlight-bullet">
+                  <i class="fa-solid fa-check-circle text-emerald"></i>
+                  <span>Dynamic choropleth heatmap (Green / Yellow / Red) across 8 performance metrics.</span>
+                </div>
+                <div class="highlight-bullet">
+                  <i class="fa-solid fa-check-circle text-emerald"></i>
+                  <span>Full 3-tier drilldown UI: <strong>District &rarr; Block &rarr; School</strong>.</span>
+                </div>
+                <div class="highlight-bullet">
+                  <i class="fa-solid fa-check-circle text-emerald"></i>
+                  <span>Data-view toggle between <strong>Schools</strong> and <strong>TNTET Candidate</strong> datasets.</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Supabase (PostgreSQL)</span>
+                <span class="tech-tag">Leaflet.js</span>
+                <span class="tech-tag">Vercel CI/CD</span>
+                <span class="tech-tag">GitHub</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <button class="btn btn-primary w-full open-modal-btn" data-project="vedasakthi">
+                  <span>Explore Full Architecture &amp; Metrics</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Obstacle Avoiding Robot -->
+          <article class="project-card glass-card">
+            <div class="project-image-container">
+              <img src="assets/images/robot.jpg" alt="Obstacle Avoiding Robot Preview" class="project-img" />
+              <div class="project-image-overlay">
+                <div class="project-links-floating">
+                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="robot">
+                    <i class="fa-solid fa-circle-info"></i> Project Details
+                  </button>
+                </div>
+              </div>
+              <div class="project-pill-featured blue-badge">
+                <i class="fa-solid fa-robot"></i> Embedded ML (2025–2026)
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="project-category"><i class="fa-solid fa-microchip"></i> Embedded Systems &amp; Robotics</span>
+                <span class="project-timeline">Dec 2025 &ndash; Jan 2026</span>
+              </div>
+
+              <h3 class="project-title">
+                Obstacle Avoiding Autonomous Robot
+              </h3>
+
+              <p class="project-description">
+                Developed an intelligent embedded navigation system using Arduino Nano powered by ML algorithms implementing the <strong>Inverted Pendulum Method (IPM)</strong> for dynamic autonomous obstacle avoidance.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="highlight-bullet">
+                  <i class="fa-solid fa-check-circle text-cyan"></i>
+                  <span>Inverted Pendulum Method (IPM) mathematical control for instant trajectory deflection.</span>
+                </div>
+                <div class="highlight-bullet">
+                  <i class="fa-solid fa-check-circle text-cyan"></i>
+                  <span>Real-time sensor fusion &amp; actuator control for sub-millisecond obstacle reaction.</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Arduino Nano</span>
+                <span class="tech-tag">Embedded C</span>
+                <span class="tech-tag">IPM Method</span>
+                <span class="tech-tag">Ultrasonic Sensors</span>
+                <span class="tech-tag">Actuators</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <button class="btn btn-secondary w-full open-modal-btn" data-project="robot">
+                  <span>View Technical Specs</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Animal Detection System -->
+          <article class="project-card glass-card">
+            <div class="project-image-container">
+              <img src="assets/images/animal_detection.jpg" alt="Animal Detection System Preview" class="project-img" />
+              <div class="project-image-overlay">
+                <div class="project-links-floating">
+                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="animal_detection">
+                    <i class="fa-solid fa-circle-info"></i> Project Details
+                  </button>
+                </div>
+              </div>
+              <div class="project-pill-featured purple-badge">
+                <i class="fa-solid fa-eye"></i> Computer Vision (2025)
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="project-category"><i class="fa-solid fa-camera"></i> Computer Vision &amp; Deep Learning</span>
+                <span class="project-timeline">Aug 2025 &ndash; Sep 2025</span>
+              </div>
+
+              <h3 class="project-title">
+                Animal Detection System Using Computer Vision
+              </h3>
+
+              <p class="project-description">
+                Built an end-to-end computer vision surveillance pipeline to detect and track animals in high-resolution video streams, fine-tuning and evaluating custom <strong>YOLOv8</strong> models for high-accuracy real-time alerts.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="highlight-bullet">
+                  <i class="fa-solid fa-check-circle text-purple"></i>
+                  <span>Automated image preprocessing, bounding box annotation, and model evaluation.</span>
+                </div>
+                <div class="highlight-bullet">
+                  <i class="fa-solid fa-check-circle text-purple"></i>
+                  <span>Real-time inference pipeline tailored for safety, agricultural protection &amp; surveillance.</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">YOLOv8</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Model Evaluation</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <button class="btn btn-secondary w-full open-modal-btn" data-project="animal_detection">
+                  <span>View Pipeline &amp; Results</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Vedasakthi Simulation Sandbox -->
+    <section id="interactive-demo" class="section interactive-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-sliders"></i> Interactive Sandbox</span>
+          <h2 class="section-title">Experience the Vedasakthi Dashboard UI</h2>
+          <p class="section-subtitle">
+            Test the live simulated data engine inspired by the Tamil Nadu Government Schools Education Dashboard. Toggle datasets and click districts to experience real-time metric recalculation.
+          </p>
+        </div>
+
+        <div class="sandbox-container glass-card">
+          <!-- Sandbox Header -->
+          <div class="sandbox-header">
+            <div class="sandbox-title-area">
+              <span class="status-indicator-green"></span>
+              <span class="sandbox-heading">Tamil Nadu Command View Simulator (38 Districts)</span>
+            </div>
+            <div class="sandbox-toggle-group">
+              <span class="toggle-label">Dataset:</span>
+              <div class="segmented-control">
+                <button class="segment-btn active" id="dataset-schools" data-type="schools">
+                  <i class="fa-solid fa-school"></i> Schools Dataset
+                </button>
+                <button class="segment-btn" id="dataset-tntet" data-type="tntet">
+                  <i class="fa-solid fa-user-graduate"></i> TNTET Candidates
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sandbox Main Grid -->
+          <div class="sandbox-grid">
+            <!-- Left: District Selector & Map Simulation -->
+            <div class="sandbox-map-panel">
+              <div class="panel-header">
+                <span class="panel-title"><i class="fa-solid fa-map"></i> Tamil Nadu Geographic Zones</span>
+                <span class="legend-badge">
+                  <span class="legend-dot dot-green"></span> High (85%+)
+                  <span class="legend-dot dot-yellow"></span> Mid (70–84%)
+                  <span class="legend-dot dot-red"></span> Alert (&lt;70%)
+                </span>
+              </div>
+
+              <div class="district-grid" id="district-chips">
+                <!-- Dynamically populated / interactive district chips -->
+                <button class="district-chip active" data-district="chennai">Chennai</button>
+                <button class="district-chip" data-district="coimbatore">Coimbatore</button>
+                <button class="district-chip" data-district="madurai">Madurai</button>
+                <button class="district-chip" data-district="salem">Salem</button>
+                <button class="district-chip" data-district="cuddalore">Cuddalore</button>
+                <button class="district-chip" data-district="tiruchirappalli">Tiruchirappalli</button>
+                <button class="district-chip" data-district="thanjavur">Thanjavur</button>
+                <button class="district-chip" data-district="tirunelveli">Tirunelveli</button>
+                <button class="district-chip" data-district="vellore">Vellore</button>
+                <button class="district-chip" data-district="dharmapuri">Dharmapuri</button>
+                <button class="district-chip" data-district="kanchipuram">Kanchipuram</button>
+                <button class="district-chip" data-district="tiruppur">Tiruppur</button>
+              </div>
+
+              <div class="simulated-map-box">
+                <div class="map-status-overlay">
+                  <div class="district-header-badge">
+                    <span id="map-district-name">Chennai District</span>
+                    <span id="map-status-badge" class="badge-status-good">Optimal Performance</span>
+                  </div>
+                  <div class="map-drilldown-breadcrumbs">
+                    <span>Tamil Nadu</span> &gt; <span id="bread-district">Chennai</span> &gt; <span id="bread-block">Central Block</span> &gt; <span>Govt HSS</span>
+                  </div>
+                </div>
+
+                <!-- Visual Heatmap Simulation Bars -->
+                <div class="heatmap-visual-bar">
+                  <div class="bar-fill" id="heatmap-bar-fill" style="width: 94%;"></div>
+                </div>
+                <div class="metric-quick-row">
+                  <span>Current Metric Score: <strong id="quick-score">94.2%</strong></span>
+                  <span>Active Blocks: <strong id="quick-blocks">16 Blocks</strong></span>
+                  <span>Total Institutions: <strong id="quick-institutions">842 Schools</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Dynamic KPI Metric Cards & Analytics -->
+            <div class="sandbox-kpi-panel">
+              <div class="panel-header">
+                <span class="panel-title"><i class="fa-solid fa-chart-pie"></i> Real-Time KPI Cards (8 Metrics)</span>
+                <span class="sync-badge"><i class="fa-solid fa-arrows-rotate fa-spin"></i> Live Supabase Sync</span>
+              </div>
+
+              <div class="kpi-cards-grid">
+                <div class="kpi-card">
+                  <div class="kpi-label">Overall Index</div>
+                  <div class="kpi-val" id="kpi-1">94.2%</div>
+                  <div class="kpi-change text-emerald"><i class="fa-solid fa-arrow-trend-up"></i> +4.2% MoM</div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-label">Attendance Rate</div>
+                  <div class="kpi-val" id="kpi-2">91.8%</div>
+                  <div class="kpi-change text-emerald"><i class="fa-solid fa-arrow-trend-up"></i> +1.8%</div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-label">Infrastructure Score</div>
+                  <div class="kpi-val" id="kpi-3">88.5%</div>
+                  <div class="kpi-change text-emerald"><i class="fa-solid fa-check"></i> Standard</div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-label">Teacher-Student Ratio</div>
+                  <div class="kpi-val" id="kpi-4">1:24</div>
+                  <div class="kpi-change text-cyan">Optimal (Target 1:30)</div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-label">Digital Lab Coverage</div>
+                  <div class="kpi-val" id="kpi-5">96.0%</div>
+                  <div class="kpi-change text-emerald"><i class="fa-solid fa-wifi"></i> Smart Classrooms</div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-label">Pass Percentage Avg</div>
+                  <div class="kpi-val" id="kpi-6">89.4%</div>
+                  <div class="kpi-change text-emerald"><i class="fa-solid fa-arrow-trend-up"></i> +3.1%</div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-label">Grievance Resolution</div>
+                  <div class="kpi-val" id="kpi-7">98.1%</div>
+                  <div class="kpi-change text-emerald"><i class="fa-solid fa-bolt"></i> &lt;48h avg</div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-label">TNTET Verified Roster</div>
+                  <div class="kpi-val" id="kpi-8">4,120</div>
+                  <div class="kpi-change text-cyan"><i class="fa-solid fa-user-check"></i> 100% Audited</div>
+                </div>
+              </div>
+
+              <div class="sandbox-footer-note">
+                <i class="fa-solid fa-info-circle text-cyan"></i>
+                <span>Architected with normalized Supabase PostgreSQL schema, custom Leaflet choropleth engine &amp; Vercel edge caching.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Journey Section -->
+    <section id="experience" class="section journey-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Career &amp; Academic Timeline</span>
+          <h2 class="section-title">Experience &amp; Education</h2>
+          <p class="section-subtitle">
+            My professional internship journey and academic foundation in Artificial Intelligence &amp; Machine Learning.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+          <!-- Work Experience Column -->
+          <div class="journey-col">
+            <h3 class="journey-col-title">
+              <i class="fa-solid fa-laptop-code text-cyan"></i> Work Experience
+            </h3>
+
+            <div class="timeline-container">
+              <div class="timeline-item glass-card">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                  <div>
+                    <h4 class="timeline-role">Full Stack Development Intern</h4>
+                    <span class="timeline-company text-cyan">Mindnotix Technology</span>
+                  </div>
+                  <span class="timeline-period">Internship</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Contributed to building full-stack development projects in a high-velocity collaborative environment.</li>
+                  <li>Worked directly on task management systems and gained practical industry experience with end-to-end software lifecycles.</li>
+                  <li>Developed a deep understanding of application state modeling, client-server architectures, and deployment workflows.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tech-tag">Full-Stack Development</span>
+                  <span class="tech-tag">Task Management</span>
+                  <span class="tech-tag">Team Collaboration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div id="education" class="journey-col">
+            <h3 class="journey-col-title">
+              <i class="fa-solid fa-graduation-cap text-indigo"></i> Education
+            </h3>
+
+            <div class="timeline-container">
+              <!-- B.Tech Degree -->
+              <div class="timeline-item glass-card">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                  <div>
+                    <h4 class="timeline-role">B.Tech, Artificial Intelligence &amp; Machine Learning</h4>
+                    <span class="timeline-company text-indigo">SNS College of Technology, Coimbatore</span>
+                  </div>
+                  <span class="timeline-period">2022 &ndash; 2026</span>
+                </div>
+                <div class="academic-score-pill">
+                  <i class="fa-solid fa-award text-amber"></i> Cumulative CGPA: <strong>7.43</strong>
+                </div>
+                <p class="timeline-text">
+                  Core coursework: Deep Learning, Neural Networks, Computer Vision, Data Structures &amp; Algorithms, Database Management Systems, Embedded IoT Systems.
+                </p>
+              </div>
+
+              <!-- High School -->
+              <div class="timeline-item glass-card">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                  <div>
+                    <h4 class="timeline-role">Higher &amp; Secondary Education</h4>
+                    <span class="timeline-company text-purple">Vidyaa Vikas International School, Thiruchengode</span>
+                  </div>
+                  <span class="timeline-period">2019 &ndash; 2022</span>
+                </div>
+                <div class="scores-row">
+                  <span class="score-badge">Higher Secondary: <strong>65%</strong></span>
+                  <span class="score-badge">Secondary: <strong>68%</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications & Activities Showcase -->
+        <div class="certs-container">
+          <h3 class="certs-title text-center">
+            <i class="fa-solid fa-certificate text-amber"></i> Certifications &amp; Technical Activities
+          </h3>
+
+          <div class="certs-grid">
+            <div class="cert-card glass-card">
+              <div class="cert-icon amber-icon"><i class="fa-brands fa-aws"></i></div>
+              <div class="cert-body">
+                <h4 class="cert-name">AWS Cloud Computing Value Added Course</h4>
+                <p class="cert-org">Hands-on experience with AWS infrastructure, EC2 compute instances, and cloud service architecture.</p>
+              </div>
+            </div>
+
+            <div class="cert-card glass-card">
+              <div class="cert-icon purple-icon"><i class="fa-solid fa-brain"></i></div>
+              <div class="cert-body">
+                <h4 class="cert-name">AI &amp; Prompt Engineering Workshop</h4>
+                <p class="cert-org">Sri Sakthi College of Technology &bull; Advanced prompt crafting, LLM optimization, and applied AI.</p>
+              </div>
+            </div>
+
+            <div class="cert-card glass-card">
+              <div class="cert-icon cyan-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <div class="cert-body">
+                <h4 class="cert-name">IEEE National Level Technical Event</h4>
+                <p class="cert-org">Bannari Amman Institute of Technology (BIT) &bull; Competitive engineering and technical problem solving.</p>
+              </div>
+            </div>
+
+            <div class="cert-card glass-card">
+              <div class="cert-icon emerald-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="cert-body">
+                <h4 class="cert-name">Blixtathon Community Workshop</h4>
+                <p class="cert-org">Indian Institute of Technology (IIT Bombay) &bull; Hands-on engineering workshop &amp; hackathon culture.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+          <h2 class="section-title">Let's Build Something Exceptional</h2>
+          <p class="section-subtitle">
+            Whether you have a full-time role, a data dashboard project, an AI/ML opportunity, or want to collaborate — feel free to drop a message!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details & Quick Badges -->
+          <div class="contact-info-panel glass-card">
+            <h3 class="contact-panel-title">Contact Information</h3>
+            <p class="contact-panel-desc">
+              I'm actively seeking full-time opportunities and impactful developer roles for the <strong>2026 Batch</strong>. Open for both remote and on-site positions.
+            </p>
+
+            <div class="contact-methods-list">
+              <a href="mailto:gurupriyan828@gmail.com" class="contact-method-item">
+                <div class="method-icon-box cyan-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Email Me</span>
+                  <span class="method-value">gurupriyan828@gmail.com</span>
+                </div>
+                <button class="copy-btn" data-copy="gurupriyan828@gmail.com" title="Copy Email" aria-label="Copy Email">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </a>
+
+              <a href="tel:+919344187782" class="contact-method-item">
+                <div class="method-icon-box emerald-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Call / WhatsApp</span>
+                  <span class="method-value">+91-9344187782</span>
+                </div>
+                <button class="copy-btn" data-copy="+919344187782" title="Copy Phone" aria-label="Copy Phone">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </a>
+
+              <a href="https://linkedin.com/in/gurupriyan-k" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+                <div class="method-icon-box indigo-icon">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">LinkedIn Profile</span>
+                  <span class="method-value">linkedin.com/in/gurupriyan-k</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square external-arrow"></i>
+              </a>
+
+              <div class="contact-method-item non-clickable">
+                <div class="method-icon-box purple-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Cuddalore &bull; Coimbatore, Tamil Nadu, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="availability-card">
+              <div class="avail-badge"><span class="pulse-dot"></span> Available Immediately</div>
+              <p class="avail-text">Ready to move quickly from concept to production-grade implementation.</p>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-panel glass-card">
+            <h3 class="contact-panel-title">Send a Direct Message</h3>
+            
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" id="contact-name" name="name" placeholder="John Doe" required />
+                  </div>
+                  <span class="error-msg" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">Your Email <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="contact-email" name="email" placeholder="john@company.com" required />
+                  </div>
+                  <span class="error-msg" id="email-error"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject / Purpose</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <select id="contact-subject" name="subject">
+                    <option value="Full-Time Job Opportunity">💼 Full-Time Job Opportunity (2026 Batch)</option>
+                    <option value="Data Dashboard / Web Project">📊 Data Dashboard / Web App Project</option>
+                    <option value="AI / Computer Vision Project">🧠 AI / Computer Vision Collaboration</option>
+                    <option value="General Inquiry / Networking">💬 General Inquiry / Networking</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <textarea id="contact-message" name="message" rows="5" placeholder="Hi Gurupriyan, I would love to discuss an opportunity..." required></textarea>
+                </div>
+                <span class="error-msg" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg w-full" id="submit-btn">
+                <span>Send Message via Email</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-box">
+            <span class="logo-text">GP</span>
+          </div>
+          <div>
+            <span class="footer-brand-title">Gurupriyan K</span>
+            <p class="footer-brand-sub">Full-Stack Developer &bull; AI/ML Engineer &bull; Cuddalore, India</p>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#interactive-demo">Live Sandbox</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/gurupriyan-k" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:gurupriyan828@gmail.com" aria-label="Email" class="social-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="tel:+919344187782" aria-label="Phone" class="social-icon">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Gurupriyan K. Built with Next-Gen Web Technologies &amp; Vanilla Architecture.</p>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+          <i class="fa-solid fa-arrow-up"></i>
+          <span>Back to Top</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Deep-Dive Modal -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body" id="modal-content">
+        <!-- Injected dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Resume Modal -->
+  <div id="resume-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-lg glass-card">
+      <div class="resume-modal-header">
+        <div class="resume-header-info">
+          <h3 class="resume-modal-title">GURUPRIYAN K &mdash; Official Resume</h3>
+          <p class="resume-modal-subtitle">Full-Stack Developer | AI/ML Engineer | Data Dashboards &amp; Applied AI</p>
+        </div>
+        <div class="resume-modal-actions">
+          <button id="print-resume-btn" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button class="modal-close-btn" id="resume-modal-close" aria-label="Close Resume Modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="resume-modal-content" id="printable-resume">
+        <!-- Resume Header -->
+        <div class="res-sec res-header">
+          <div class="res-name-title">
+            <h1 class="res-name">GURUPRIYAN K</h1>
+            <p class="res-role-text">Full-Stack Developer | AI/ML Engineer | Data Dashboards &amp; Applied AI</p>
+          </div>
+          <div class="res-contact-info">
+            <span><i class="fa-solid fa-location-dot"></i> Cuddalore, India</span> &bull;
+            <span><i class="fa-solid fa-phone"></i> +91-9344187782</span> &bull;
+            <span><i class="fa-solid fa-envelope"></i> gurupriyan828@gmail.com</span> &bull;
+            <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/gurupriyan-k</span>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="res-sec">
+          <h3 class="res-sec-title">PROFESSIONAL SUMMARY</h3>
+          <p class="res-text">
+            Engineering student and full-stack developer with hands-on experience building production-style data dashboards and applied AI/embedded systems. Recently shipped a live government-facing analytics dashboard end-to-end — from Supabase schema design to a Leaflet-based interactive map UI. Comfortable moving between backend data modelling, frontend interface design, and embedded/AI prototyping.
+          </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="res-sec">
+          <h3 class="res-sec-title">TECHNICAL SKILLS</h3>
+          <ul class="res-list">
+            <li><strong>Programming &amp; Frameworks:</strong> Next.js, Python, SQL, HTML/CSS, JavaScript/TypeScript</li>
+            <li><strong>Data &amp; Visualization:</strong> Supabase (PostgreSQL), Leaflet.js (interactive maps &amp; choropleth visualization)</li>
+            <li><strong>Cloud &amp; Deployment:</strong> AWS (EC2), Vercel (CI/CD deployment)</li>
+            <li><strong>Embedded Systems:</strong> Arduino, Sensor Integration, ML-based navigation (IPM Method)</li>
+            <li><strong>AI &amp; Generative AI:</strong> Prompt Engineering, Applied GenAI workflows, YOLOv8, Computer Vision</li>
+            <li><strong>Tools &amp; Interface Design:</strong> Git, GitHub, dashboard UI layout (KPI cards, sidebar navigation, colour-coded status systems)</li>
+            <li><strong>Design &amp; Prototyping:</strong> Figma, Framer, Canva, Wireframing, Vibe Coding (AI-assisted rapid prototyping)</li>
+            <li><strong>Non-Technical:</strong> Time Management, Event Coordination, Collaboration, Async Written Updates</li>
+          </ul>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="res-sec">
+          <h3 class="res-sec-title">WORK EXPERIENCE</h3>
+          <div class="res-item">
+            <div class="res-item-top">
+              <strong>Full Stack Development Intern &mdash; Mindnotix Technology</strong>
+              <span class="res-date">Internship</span>
+            </div>
+            <ul class="res-bullet-list">
+              <li>Contributed to building full-stack development projects in a collaborative environment.</li>
+              <li>Worked on task management systems and gained practical industry experience.</li>
+              <li>Developed understanding of end-to-end application development workflows.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="res-sec">
+          <h3 class="res-sec-title">PROJECTS</h3>
+          
+          <div class="res-item">
+            <div class="res-item-top">
+              <strong>Vedasakthi &mdash; Tamil Nadu Government Schools Education Dashboard</strong>
+              <span class="res-date">2026</span>
+            </div>
+            <div class="res-stack">Next.js &bull; Supabase (PostgreSQL) &bull; Leaflet.js &bull; Vercel &bull; GitHub</div>
+            <ul class="res-bullet-list">
+              <li>Rebuilt a Minister's Command View analytics dashboard on a modern stack, turning a static HTML prototype into a live system covering district, block, and school-level performance across all 38 districts of Tamil Nadu.</li>
+              <li>Designed a normalized Supabase schema and built a Next.js/Leaflet frontend rendering a dynamic choropleth heatmap (Green/Yellow/Red) across 8 performance metrics, with KPI cards and sidebar navigation.</li>
+              <li>Built a full drill-down UI — district &rarr; block &rarr; school — plus a data-view toggle between Schools and TNTET Candidate datasets, matching provided design references.</li>
+              <li>Delivered all three project milestones on schedule within a 20-day build cycle; deployed live on Vercel with documented source on GitHub.</li>
+            </ul>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-top">
+              <strong>Obstacle Avoiding Robot</strong>
+              <span class="res-date">Dec 2025 &ndash; Jan 2026</span>
+            </div>
+            <div class="res-stack">Arduino Nano &bull; Embedded C &bull; ML Algorithms (IPM Method)</div>
+            <ul class="res-bullet-list">
+              <li>Developed an embedded navigation system using Arduino Nano based on ML algorithms, implementing the Inverted Pendulum Method (IPM) for autonomous obstacle avoidance.</li>
+              <li>Integrated sensors and actuators for real-time environment detection and response.</li>
+            </ul>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-top">
+              <strong>Animal Detection System Using Computer Vision</strong>
+              <span class="res-date">Aug 2025 &ndash; Sep 2025</span>
+            </div>
+            <div class="res-stack">Python &bull; YOLOv8 &bull; Computer Vision</div>
+            <ul class="res-bullet-list">
+              <li>Built a computer vision&ndash;based detection system to identify animals in images/video, training and evaluating models with YOLOv8 for real-time detection.</li>
+              <li>Applied image preprocessing, labeling, and model evaluation for a surveillance/safety use case.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="res-sec">
+          <h3 class="res-sec-title">EDUCATION</h3>
+          <div class="res-item">
+            <div class="res-item-top">
+              <strong>B.Tech, Artificial Intelligence &amp; Machine Learning &mdash; SNS College of Technology, Coimbatore</strong>
+              <span class="res-date">2022 &ndash; 2026</span>
+            </div>
+            <div class="res-grade">CGPA: <strong>7.43</strong></div>
+          </div>
+          <div class="res-item">
+            <div class="res-item-top">
+              <strong>Higher &amp; Secondary Education &mdash; Vidyaa Vikas International School, Thiruchengode</strong>
+              <span class="res-date">2019 &ndash; 2022</span>
+            </div>
+            <div class="res-grade">Higher Secondary: 65% | Secondary: 68%</div>
+          </div>
+        </div>
+
+        <!-- Certifications & Activities -->
+        <div class="res-sec">
+          <h3 class="res-sec-title">CERTIFICATIONS &amp; ACTIVITIES</h3>
+          <ul class="res-bullet-list">
+            <li><strong>Value Added Course (Cloud Computing):</strong> Hands-on experience with AWS infrastructure and cloud services.</li>
+            <li><strong>AI Workshop (Prompt Engineering):</strong> Sri Sakthi College of Technology.</li>
+            <li><strong>National Level Technical Event:</strong> IEEE event at Bannari Amman Institute of Technology (BIT).</li>
+            <li><strong>Workshop, Blixtathon Community:</strong> Indian Institute of Technology (IIT Bombay).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
