@@ -50,7 +50,6 @@
         <a href="#about" class="nav-item">About</a>
         <a href="#skills" class="nav-item">Skills</a>
         <a href="#projects" class="nav-item">Projects</a>
-        <a href="#interactive-demo" class="nav-item">Live Demo</a>
         <a href="#experience" class="nav-item">Experience</a>
         <a href="#education" class="nav-item">Education</a>
         <a href="#contact" class="nav-item">Contact</a>
@@ -81,7 +80,6 @@
       <a href="#about" class="mobile-nav-item">About</a>
       <a href="#skills" class="mobile-nav-item">Skills</a>
       <a href="#projects" class="mobile-nav-item">Projects</a>
-      <a href="#interactive-demo" class="mobile-nav-item">Live Demo</a>
       <a href="#experience" class="mobile-nav-item">Experience</a>
       <a href="#education" class="mobile-nav-item">Education</a>
       <a href="#contact" class="mobile-nav-item">Contact</a>
@@ -125,12 +123,12 @@
 
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary btn-lg">
-              <span>View Flagship Projects</span>
+              <span>View Projects</span>
               <i class="fa-solid fa-arrow-down"></i>
             </a>
-            <a href="#interactive-demo" class="btn btn-glass btn-lg">
-              <i class="fa-solid fa-map-location-dot"></i>
-              <span>Explore TN Map Sandbox</span>
+            <a href="#contact" class="btn btn-glass btn-lg">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Get in Touch</span>
             </a>
             <button id="hero-resume-btn" class="btn btn-secondary btn-lg">
               <i class="fa-solid fa-download"></i>
@@ -471,9 +469,6 @@
                   <button class="btn btn-primary btn-sm open-modal-btn" data-project="vedasakthi">
                     <i class="fa-solid fa-circle-info"></i> Project Deep Dive
                   </button>
-                  <a href="#interactive-demo" class="btn btn-secondary btn-sm">
-                    <i class="fa-solid fa-play"></i> Live Sandbox
-                  </a>
                 </div>
               </div>
               <div class="project-pill-featured">
@@ -651,155 +646,6 @@
       </div>
     </section>
 
-    <!-- Interactive Spatial Analytics Simulation Sandbox -->
-    <section id="interactive-demo" class="section interactive-section">
-      <div class="section-container">
-        <div class="section-header text-center">
-          <span class="section-tag"><i class="fa-solid fa-sliders"></i> Interactive Sandbox</span>
-          <h2 class="section-title">Experience the Spatial Analytics Dashboard UI</h2>
-          <p class="section-subtitle">
-            Test the live simulated data engine architecture engineered for the freelance state education analytics platform. Toggle datasets and click districts to experience real-time metric recalculation.
-          </p>
-        </div>
-
-        <div class="sandbox-container glass-card">
-          <!-- Sandbox Header -->
-          <div class="sandbox-header">
-            <div class="sandbox-title-area">
-              <span class="status-indicator-green"></span>
-              <span class="sandbox-heading">Tamil Nadu Command View Simulator &bull; Freelance Project Architecture</span>
-            </div>
-            <div class="sandbox-toggle-group">
-              <span class="toggle-label">Dataset:</span>
-              <div class="segmented-control">
-                <button class="segment-btn active" id="dataset-schools" data-type="schools">
-                  <i class="fa-solid fa-school"></i> Schools Dataset
-                </button>
-                <button class="segment-btn" id="dataset-tntet" data-type="tntet">
-                  <i class="fa-solid fa-user-graduate"></i> TNTET Candidates
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sandbox Main Grid -->
-          <div class="sandbox-grid">
-            <!-- Left: District Selector & Map Simulation -->
-            <div class="sandbox-map-panel">
-              <div class="panel-header">
-                <span class="panel-title"><i class="fa-solid fa-map"></i> Tamil Nadu Geographic Zones</span>
-                <span class="legend-badge">
-                  <span class="legend-dot dot-green"></span> High (85%+)
-                  <span class="legend-dot dot-yellow"></span> Mid (70–84%)
-                  <span class="legend-dot dot-red"></span> Alert (&lt;70%)
-                </span>
-              </div>
-
-              <div class="district-grid" id="district-chips">
-                <!-- Dynamically populated / interactive district chips -->
-                <button class="district-chip active" data-district="chennai">Chennai</button>
-                <button class="district-chip" data-district="coimbatore">Coimbatore</button>
-                <button class="district-chip" data-district="madurai">Madurai</button>
-                <button class="district-chip" data-district="salem">Salem</button>
-                <button class="district-chip" data-district="cuddalore">Cuddalore</button>
-                <button class="district-chip" data-district="tiruchirappalli">Tiruchirappalli</button>
-                <button class="district-chip" data-district="thanjavur">Thanjavur</button>
-                <button class="district-chip" data-district="tirunelveli">Tirunelveli</button>
-                <button class="district-chip" data-district="vellore">Vellore</button>
-                <button class="district-chip" data-district="dharmapuri">Dharmapuri</button>
-                <button class="district-chip" data-district="kanchipuram">Kanchipuram</button>
-                <button class="district-chip" data-district="tiruppur">Tiruppur</button>
-              </div>
-
-              <div class="simulated-map-box">
-                <div class="map-status-overlay">
-                  <div class="district-header-badge">
-                    <span id="map-district-name">Chennai District</span>
-                    <span id="map-status-badge" class="badge-status-good">Optimal Performance</span>
-                  </div>
-                  <div class="map-drilldown-breadcrumbs">
-                    <span>Tamil Nadu</span> &gt; <span id="bread-district">Chennai</span> &gt; <span id="bread-block">Central Block</span> &gt; <span>Govt HSS</span>
-                  </div>
-                </div>
-
-                <!-- Visual Heatmap Simulation Bars -->
-                <div class="heatmap-visual-bar">
-                  <div class="bar-fill" id="heatmap-bar-fill" style="width: 94%;"></div>
-                </div>
-                <div class="metric-quick-row">
-                  <span>Current Metric Score: <strong id="quick-score">94.2%</strong></span>
-                  <span>Active Blocks: <strong id="quick-blocks">16 Blocks</strong></span>
-                  <span>Total Institutions: <strong id="quick-institutions">842 Schools</strong></span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right: Dynamic KPI Metric Cards & Analytics -->
-            <div class="sandbox-kpi-panel">
-              <div class="panel-header">
-                <span class="panel-title"><i class="fa-solid fa-chart-pie"></i> Real-Time KPI Cards (8 Metrics)</span>
-                <span class="sync-badge"><i class="fa-solid fa-arrows-rotate fa-spin"></i> Live Supabase Sync</span>
-              </div>
-
-              <div class="kpi-cards-grid">
-                <div class="kpi-card">
-                  <div class="kpi-label">Overall Index</div>
-                  <div class="kpi-val" id="kpi-1">94.2%</div>
-                  <div class="kpi-change text-emerald"><i class="fa-solid fa-arrow-trend-up"></i> +4.2% MoM</div>
-                </div>
-
-                <div class="kpi-card">
-                  <div class="kpi-label">Attendance Rate</div>
-                  <div class="kpi-val" id="kpi-2">91.8%</div>
-                  <div class="kpi-change text-emerald"><i class="fa-solid fa-arrow-trend-up"></i> +1.8%</div>
-                </div>
-
-                <div class="kpi-card">
-                  <div class="kpi-label">Infrastructure Score</div>
-                  <div class="kpi-val" id="kpi-3">88.5%</div>
-                  <div class="kpi-change text-emerald"><i class="fa-solid fa-check"></i> Standard</div>
-                </div>
-
-                <div class="kpi-card">
-                  <div class="kpi-label">Teacher-Student Ratio</div>
-                  <div class="kpi-val" id="kpi-4">1:24</div>
-                  <div class="kpi-change text-cyan">Optimal (Target 1:30)</div>
-                </div>
-
-                <div class="kpi-card">
-                  <div class="kpi-label">Digital Lab Coverage</div>
-                  <div class="kpi-val" id="kpi-5">96.0%</div>
-                  <div class="kpi-change text-emerald"><i class="fa-solid fa-wifi"></i> Smart Classrooms</div>
-                </div>
-
-                <div class="kpi-card">
-                  <div class="kpi-label">Pass Percentage Avg</div>
-                  <div class="kpi-val" id="kpi-6">89.4%</div>
-                  <div class="kpi-change text-emerald"><i class="fa-solid fa-arrow-trend-up"></i> +3.1%</div>
-                </div>
-
-                <div class="kpi-card">
-                  <div class="kpi-label">Grievance Resolution</div>
-                  <div class="kpi-val" id="kpi-7">98.1%</div>
-                  <div class="kpi-change text-emerald"><i class="fa-solid fa-bolt"></i> &lt;48h avg</div>
-                </div>
-
-                <div class="kpi-card">
-                  <div class="kpi-label">TNTET Verified Roster</div>
-                  <div class="kpi-val" id="kpi-8">4,120</div>
-                  <div class="kpi-change text-cyan"><i class="fa-solid fa-user-check"></i> 100% Audited</div>
-                </div>
-              </div>
-
-              <div class="sandbox-footer-note">
-                <i class="fa-solid fa-info-circle text-cyan"></i>
-                <span>Architected with normalized Supabase PostgreSQL schema, custom Leaflet choropleth engine &amp; Vercel edge caching.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Experience & Education Journey Section -->
     <section id="experience" class="section journey-section">
@@ -1079,7 +925,6 @@
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#interactive-demo">Live Sandbox</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </div>
