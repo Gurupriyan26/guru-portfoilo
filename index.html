@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gurupriyan K | Full-Stack Developer & AI/ML Engineer</title>
-  <meta name="description" content="Portfolio of Gurupriyan K — Full-Stack Developer, AI/ML Engineer, and Data Dashboard Specialist with hands-on experience in Next.js, Supabase, Leaflet.js, Python, YOLOv8, and Embedded Systems." />
+  <title>Gurupriyan K | Full-Stack Developer &amp; AI/ML Engineer</title>
+  <meta name="description" content="Portfolio of Gurupriyan K — Full-Stack Developer & AI/ML Engineer specializing in spatial analytics dashboards, Next.js, Supabase, Leaflet.js, Python, YOLOv8, and Embedded Systems." />
   <meta name="keywords" content="Gurupriyan K, Full Stack Developer, AI ML Engineer, Data Dashboards, Leaflet.js, Next.js, Supabase, YOLOv8, Arduino, Portfolio, Tamil Nadu" />
   <meta name="author" content="Gurupriyan K" />
 
-  <!-- Open Graph / Meta -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Gurupriyan K | Full-Stack Developer & AI/ML Engineer" />
   <meta property="og:description" content="Explore production dashboards, AI/ML models, computer vision systems, and embedded robotics built by Gurupriyan K." />
@@ -16,7 +16,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -98,7 +98,8 @@
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
       <div class="hero-container">
-        <div class="hero-content">
+        <!-- Hero Left Column: Info & Typography -->
+        <div class="hero-left">
           <div class="hero-badge">
             <i class="fa-solid fa-bolt-lightning text-accent"></i>
             <span>Engineering Student &bull; B.Tech AI &amp; ML (2022–2026)</span>
@@ -110,7 +111,7 @@
 
           <div class="typing-container">
             <span class="typing-prefix">Specialized in</span>
-            <span id="typing-text" class="typing-text"></span>
+            <span id="typing-text" class="typing-text">Full-Stack Developer</span>
             <span class="typing-cursor">|</span>
           </div>
 
@@ -139,21 +140,82 @@
           <!-- Hero KPI Stats Grid -->
           <div class="hero-stats-grid">
             <div class="stat-card">
-              <div class="stat-number" data-target="38">0</div>
+              <div class="stat-number-wrapper">
+                <span class="stat-number" data-target="38">38</span>
+              </div>
               <div class="stat-label">Districts Mapped in TN</div>
             </div>
             <div class="stat-card">
-              <div class="stat-number" data-target="3">0</div>
+              <div class="stat-number-wrapper">
+                <span class="stat-number" data-target="3">3</span>
+                <span class="stat-suffix">+</span>
+              </div>
               <div class="stat-label">Core Applied Projects</div>
             </div>
             <div class="stat-card">
-              <div class="stat-number" data-target="8">0</div>
+              <div class="stat-number-wrapper">
+                <span class="stat-number" data-target="8">8</span>
+              </div>
               <div class="stat-label">KPI Metrics Engine</div>
             </div>
             <div class="stat-card">
-              <div class="stat-number" data-target="100">0</div>
-              <div class="stat-suffix">%</div>
-              <div class="stat-label">Vercel &amp; Cloud Deployed</div>
+              <div class="stat-number-wrapper">
+                <span class="stat-number" data-target="100">100</span>
+                <span class="stat-suffix">%</span>
+              </div>
+              <div class="stat-label">Cloud Deployed &amp; Active</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Interactive Developer Terminal / Code Sandbox Card -->
+        <div class="hero-right">
+          <div class="code-terminal-card glass-card">
+            <!-- Terminal Window Top Bar -->
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-tabs">
+                <span class="terminal-tab active"><i class="fa-brands fa-js text-amber"></i> developer.ts</span>
+                <span class="terminal-tab"><i class="fa-solid fa-database text-emerald"></i> stack.json</span>
+              </div>
+              <div class="terminal-status">
+                <span class="status-indicator"></span> live
+              </div>
+            </div>
+
+            <!-- Terminal Code Body -->
+            <div class="terminal-body">
+              <pre class="code-content"><code><span class="code-keyword">const</span> <span class="code-var">developer</span>: <span class="code-type">EngineerProfile</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">"Gurupriyan K"</span>,
+  <span class="code-prop">role</span>: [<span class="code-str">"Full-Stack Dev"</span>, <span class="code-str">"AI/ML Engineer"</span>],
+  <span class="code-prop">education</span>: {
+    <span class="code-prop">degree</span>: <span class="code-str">"B.Tech AI & ML"</span>,
+    <span class="code-prop">institute</span>: <span class="code-str">"SNS College of Technology"</span>,
+    <span class="code-prop">cgpa</span>: <span class="code-num">7.43</span>,
+    <span class="code-prop">batch</span>: <span class="code-num">2026</span>
+  },
+  <span class="code-prop">flagshipFreelance</span>: {
+    <span class="code-prop">title</span>: <span class="code-str">"State Education Analytics"</span>,
+    <span class="code-prop">scope</span>: <span class="code-str">"38 Districts &bull; 8 KPI Metrics"</span>,
+    <span class="code-prop">stack</span>: [<span class="code-str">"Next.js"</span>, <span class="code-str">"Supabase"</span>, <span class="code-str">"Leaflet"</span>]
+  },
+  <span class="code-prop">coreCompetencies</span>: [
+    <span class="code-str">"YOLOv8 & Computer Vision"</span>,
+    <span class="code-str">"Arduino & Embedded C (IPM)"</span>,
+    <span class="code-str">"AWS EC2 & Vercel CI/CD"</span>
+  ],
+  <span class="code-prop">status</span>: <span class="code-str code-highlight">"🚀 Available for High-Impact Roles"</span>
+};</code></pre>
+            </div>
+
+            <!-- Terminal Quick Action Bar -->
+            <div class="terminal-footer">
+              <div class="terminal-tag"><i class="fa-solid fa-location-dot text-cyan"></i> Cuddalore / Coimbatore, IN</div>
+              <div class="terminal-tag"><i class="fa-brands fa-github text-white"></i> Gurupriyan26</div>
             </div>
           </div>
         </div>
@@ -603,7 +665,6 @@
       </div>
     </section>
 
-
     <!-- Experience & Education Journey Section -->
     <section id="experience" class="section journey-section">
       <div class="section-container">
@@ -900,7 +961,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="current-year">2026</span> Gurupriyan K. Built with Next-Gen Web Technologies &amp; Vanilla Architecture.</p>
+        <p>&copy; <span id="current-year">2026</span> Gurupriyan K. Built with Next-Gen Web Technologies &amp; Clean Architecture.</p>
         <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
           <i class="fa-solid fa-arrow-up"></i>
           <span>Back to Top</span>
