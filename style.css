@@ -746,61 +746,34 @@ body {
   margin-top: 4px;
 }
 
-/* Floating Badges around Avatar */
-.floating-badge {
-  position: absolute;
-  padding: 8px 14px;
-  background: rgba(15, 20, 35, 0.88);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius-md);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #fff;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+.avatar-tech-row {
   display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.avatar-tech-chip {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  animation: floatBadge 4s ease-in-out infinite alternate;
-  z-index: 2;
+  gap: 5px;
+  transition: all var(--transition-fast);
 }
 
-.badge-nextjs {
-  top: 10px;
-  left: -28px;
-  border-color: rgba(56, 189, 248, 0.4);
-  color: #38bdf8;
-  animation-delay: 0s;
-}
-
-.badge-python {
-  top: 35%;
-  right: -32px;
-  border-color: rgba(245, 158, 11, 0.4);
-  color: #fbbf24;
-  animation-delay: -1.2s;
-}
-
-.badge-supabase {
-  bottom: 80px;
-  left: -32px;
-  border-color: rgba(16, 185, 129, 0.4);
-  color: #34d399;
-  animation-delay: -2.4s;
-}
-
-.badge-leaflet {
-  bottom: 12px;
-  right: -24px;
-  border-color: rgba(99, 102, 241, 0.4);
-  color: #a5b4fc;
-  animation-delay: -3s;
-}
-
-@keyframes floatBadge {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-8px); }
+.avatar-tech-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #fff;
 }
 
 /* ==========================================================================
