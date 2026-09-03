@@ -665,9 +665,9 @@ body {
 .avatar-card {
   position: relative;
   background: linear-gradient(180deg, rgba(26, 31, 53, 0.85) 0%, rgba(14, 17, 29, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-lg);
-  padding: 16px;
+  padding: 12px;
   box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 35px -8px var(--accent-indigo-glow);
   backdrop-filter: blur(20px);
 }
@@ -678,7 +678,7 @@ body {
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-md);
   overflow: hidden;
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .avatar-img {
@@ -690,90 +690,6 @@ body {
 
 .avatar-card:hover .avatar-img {
   transform: scale(1.04);
-}
-
-.avatar-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(10,12,20,0.8) 100%);
-}
-
-.avatar-badge-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  background: rgba(16, 185, 129, 0.15);
-  border: 1px solid rgba(16, 185, 129, 0.35);
-  border-radius: var(--radius-full);
-  color: #34d399;
-  font-size: 0.78rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  position: relative;
-}
-
-.pulse-ring {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent-emerald);
-  box-shadow: 0 0 10px var(--accent-emerald);
-}
-
-.avatar-details {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.avatar-name {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #fff;
-}
-
-.avatar-role {
-  font-size: 0.85rem;
-  color: var(--accent-cyan);
-  font-weight: 600;
-}
-
-.avatar-location {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-top: 4px;
-}
-
-.avatar-tech-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.avatar-tech-chip {
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  font-weight: 600;
-  padding: 4px 9px;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #cbd5e1;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  transition: all var(--transition-fast);
-}
-
-.avatar-tech-chip:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(99, 102, 241, 0.3);
-  color: #fff;
 }
 
 /* ==========================================================================
