@@ -466,19 +466,19 @@ function initModals() {
 
   const projectDetailsData = {
     vedasakthi: {
-      title: 'Vedasakthi — Tamil Nadu Government Schools Education Dashboard',
+      title: 'State Education & Spatial Analytics Dashboard (Freelance Project)',
       image: 'assets/images/vedasakthi.jpg',
-      category: 'Gov-Tech & Data Analytics (2026)',
-      stack: ['Next.js', 'Supabase (PostgreSQL)', 'Leaflet.js', 'Vercel', 'GitHub'],
+      category: 'Freelance Client Project & Spatial Analytics (2026)',
+      stack: ['Freelance Contract', 'Next.js', 'Supabase (PostgreSQL)', 'Leaflet.js', 'Vercel', 'GitHub'],
       description: `
-        A production-grade Minister's Command View analytics dashboard engineered end-to-end to deliver unprecedented visibility into the education performance of all 38 districts in Tamil Nadu.
+        A production-grade executive command view analytics dashboard engineered end-to-end under private freelance client contract to deliver comprehensive visibility into education and infrastructure performance across all 38 districts of Tamil Nadu.
       `,
       highlights: [
-        '<strong>Full Geographic Coverage:</strong> Rebuilt a static prototype into a live, highly responsive Next.js application spanning 38 districts, 413 blocks, and thousands of government schools.',
+        '<strong>Full Geographic Coverage:</strong> Rebuilt a static client prototype into a live, highly responsive Next.js application spanning 38 districts, 413 blocks, and regional school data.',
         '<strong>Dynamic Choropleth Heatmap:</strong> Visualizes 8 key performance indicators (Green/Yellow/Red status thresholds) with custom Leaflet GeoJSON layer integration.',
-        '<strong>3-Tier Drilldown Navigation:</strong> Intuitive exploration flow: State Level &rarr; District &rarr; Block &rarr; Individual School data.',
-        '<strong>Dataset Switcher:</strong> Live toggle between School Infrastructure / Academic data and TNTET Candidate roster datasets.',
-        '<strong>Rapid Delivery:</strong> Completed all 3 project milestones on schedule within a strict 20-day build cycle.'
+        '<strong>3-Tier Drilldown Navigation:</strong> Intuitive exploration flow: State Level &rarr; District &rarr; Block &rarr; School data.',
+        '<strong>Dataset Switcher:</strong> Live toggle between School Infrastructure metrics and TNTET candidate datasets.',
+        '<strong>Milestone Delivery:</strong> Completed all 3 client milestones on schedule within a strict 20-day freelance build cycle.'
       ],
       architecture: `
         Normalized Supabase schema with PostgreSQL Row Level Security (RLS) &rarr; Next.js App Router for dynamic API rendering &rarr; Leaflet.js client visualization &rarr; Automated Vercel CI/CD.
