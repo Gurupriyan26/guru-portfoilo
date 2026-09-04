@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "npx -y serve -l 3000 .",
     "start": "npx -y serve -l 3000 .",
-    "serve": "npx -y serve .",
-    "build": "echo 'Static portfolio ready for deployment'"
+    "serve": "npx -y serve ."
   },
   "keywords": [
     "portfolio",

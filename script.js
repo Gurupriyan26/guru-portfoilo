@@ -9,10 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initSkillsFilter();
   initModals();
-  initContactForm();
   initNavigation();
   initCopyButtons();
+  initFooterYear();
 });
+
+function initFooterYear() {
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+}
 
 /* ==========================================================================
    1. PARTICLE CANVAS ANIMATION
@@ -267,6 +274,8 @@ function initModals() {
       image: 'assets/images/vedasakthi.jpg',
       category: 'Freelance Client Project & Spatial Analytics (2026)',
       stack: ['Freelance Contract', 'Next.js', 'Supabase (PostgreSQL)', 'Leaflet.js', 'Vercel', 'GitHub'],
+      githubUrl: 'https://github.com/Gurupriyan26',
+      liveUrl: 'https://github.com/Gurupriyan26',
       description: `
         A production-grade executive command view analytics dashboard engineered end-to-end under private freelance client contract to deliver comprehensive visibility into education and infrastructure performance across all 38 districts of Tamil Nadu.
       `,
@@ -281,11 +290,33 @@ function initModals() {
         Normalized Supabase schema with PostgreSQL Row Level Security (RLS) &rarr; Next.js App Router for dynamic API rendering &rarr; Leaflet.js client visualization &rarr; Automated Vercel CI/CD.
       `
     },
+    journey_guard: {
+      title: 'JourneyGuard: AI Travel Safety & Telemetry Platform',
+      image: 'assets/images/journey_guard.svg',
+      category: 'AI / Computer Vision & IoT Safety Architecture (2025–2026)',
+      stack: ['Python', 'Computer Vision (OpenCV)', 'YOLOv8', 'IoT & GPS Telemetry', 'Next.js', 'Supabase', 'Twilio / SOS API'],
+      githubUrl: 'https://github.com/Gurupriyan26',
+      liveUrl: 'https://github.com/Gurupriyan26',
+      description: `
+        A comprehensive travel safety and accident prevention platform engineered to protect drivers and passengers. By continuously monitoring driver alertness through computer vision and analyzing real-time vehicle telemetry, JourneyGuard proactively mitigates road hazards and accelerates emergency response times during critical incidents.
+      `,
+      highlights: [
+        '<strong>Real-Time Facial Landmark Analysis:</strong> Implemented Eye Aspect Ratio (EAR) and Mouth Aspect Ratio (MAR) algorithms alongside custom YOLOv8 detection to identify micro-sleeps, fatigue, and mobile phone distractions.',
+        '<strong>Low-Latency Edge Inference:</strong> Optimized vision models for edge execution ensuring sub-50ms alert latency directly inside the vehicle cabin.',
+        '<strong>Geospatial Safety Fence & Live Tracking:</strong> Real-time GPS coordinate telemetry streaming to cloud database with geofencing and route deviation monitoring.',
+        '<strong>Automated SOS Dispatch Protocol:</strong> In the event of critical impact or unresponsiveness, automatically broadcasts real-time GPS coordinates and driver status to emergency contacts and authorities.',
+        '<strong>Fleet & Trip Analytics HUD:</strong> Centralized dashboard for historical driving performance scores, incident logs, and route hazard heatmaps.'
+      ],
+      architecture: `
+        Camera Video Feed &rarr; OpenCV / YOLOv8 Landmark Pipeline &rarr; Edge Anomaly Alert Engine &rarr; GPS Telemetry &rarr; Supabase Real-Time Backend &rarr; Emergency SOS Webhook &rarr; Next.js Command Dashboard.
+      `
+    },
     robot: {
       title: 'Obstacle Avoiding Robot using Inverted Pendulum Method (IPM)',
       image: 'assets/images/robot.jpg',
       category: 'Embedded Systems & Robotics (Dec 2025 – Jan 2026)',
       stack: ['Arduino Nano', 'Embedded C', 'ML Algorithms (IPM)', 'Ultrasonic Sensors', 'Actuators'],
+      githubUrl: 'https://github.com/Gurupriyan26',
       description: `
         An autonomous robotic navigation prototype powered by machine learning algorithms that implement the Inverted Pendulum Method (IPM) to compute obstacle avoidance paths in real time.
       `,
@@ -304,6 +335,7 @@ function initModals() {
       image: 'assets/images/animal_detection.jpg',
       category: 'Computer Vision & Deep Learning (Aug 2025 – Sep 2025)',
       stack: ['Python', 'YOLOv8', 'OpenCV', 'PyTorch', 'Model Evaluation', 'Surveillance'],
+      githubUrl: 'https://github.com/Gurupriyan26',
       description: `
         An intelligent computer vision system trained to identify, classify, and track wild and domestic animals in high-resolution multi-camera surveillance feeds for safety and farm protection.
       `,
@@ -343,8 +375,23 @@ function initModals() {
         </ul>
 
         <h3 class="modal-section-title"><i class="fa-solid fa-network-wired text-indigo"></i> Architecture &amp; Data Pipeline</h3>
-        <div style="background: rgba(0,0,0,0.4); padding: 14px 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); font-family: var(--font-mono); font-size: 0.85rem; color: #38bdf8;">
+        <div style="background: rgba(0,0,0,0.4); padding: 14px 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); font-family: var(--font-mono); font-size: 0.85rem; color: #38bdf8; margin-bottom: 24px;">
           ${data.architecture}
+        </div>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08);">
+          ${data.githubUrl ? `
+            <a href="${data.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="flex: 1; min-width: 200px; justify-content: center;">
+              <i class="fa-brands fa-github"></i>
+              <span>Review GitHub Repository</span>
+            </a>
+          ` : ''}
+          ${data.liveUrl ? `
+            <a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="flex: 1; min-width: 200px; justify-content: center;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <span>Live Project Demo / Vercel</span>
+            </a>
+          ` : ''}
         </div>
       `;
 
@@ -409,65 +456,6 @@ function initModals() {
   }
 }
 
-/* ==========================================================================
-   7. CONTACT FORM & VALIDATION
-   ========================================================================= */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  const nameInput = document.getElementById('contact-name');
-  const emailInput = document.getElementById('contact-email');
-  const subjectInput = document.getElementById('contact-subject');
-  const messageInput = document.getElementById('contact-message');
-
-  const nameError = document.getElementById('name-error');
-  const emailError = document.getElementById('email-error');
-  const messageError = document.getElementById('message-error');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let isValid = true;
-
-    // Name Validation
-    if (!nameInput.value.trim()) {
-      nameError.textContent = 'Please enter your name.';
-      isValid = false;
-    } else {
-      nameError.textContent = '';
-    }
-
-    // Email Validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
-      emailError.textContent = 'Please enter a valid email address.';
-      isValid = false;
-    } else {
-      emailError.textContent = '';
-    }
-
-    // Message Validation
-    if (!messageInput.value.trim()) {
-      messageError.textContent = 'Please enter a message.';
-      isValid = false;
-    } else {
-      messageError.textContent = '';
-    }
-
-    if (isValid) {
-      const subject = encodeURIComponent(`${subjectInput.value} — from ${nameInput.value.trim()}`);
-      const body = encodeURIComponent(
-        `Hi Gurupriyan,\n\n${messageInput.value.trim()}\n\nFrom: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}`
-      );
-
-      // Open mail client
-      window.location.href = `mailto:gurupriyan828@gmail.com?subject=${subject}&body=${body}`;
-
-      showToast('Opening your default email client...', 'success');
-      form.reset();
-    }
-  });
-}
 
 /* ==========================================================================
    8. NAVIGATION & SCROLL SPY

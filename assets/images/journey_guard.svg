@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080a14"/>
+      <stop offset="50%" stop-color="#0e1322"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="indigoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.7)"/>
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.8)"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Grid & Glows -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+  
+  <g opacity="0.1" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="240" y1="0" x2="240" y2="675"/>
+    <line x1="480" y1="0" x2="480" y2="675"/>
+    <line x1="720" y1="0" x2="720" y2="675"/>
+    <line x1="960" y1="0" x2="960" y2="675"/>
+  </g>
+
+  <!-- Top Ambient Glows -->
+  <circle cx="200" cy="100" r="180" fill="#06b6d4" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="1000" cy="200" r="220" fill="#6366f1" opacity="0.15" filter="url(#glow)"/>
+
+  <!-- Top App Navigation Bar -->
+  <rect x="50" y="40" width="1100" height="60" rx="14" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.1)"/>
+  
+  <!-- Logo Icon -->
+  <rect x="75" y="52" width="36" height="36" rx="8" fill="url(#cyanGrad)"/>
+  <path d="M85 70 L91 63 L99 74 L104 68" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <text x="125" y="76" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" letter-spacing="0.5">JourneyGuard</text>
+  <text x="270" y="76" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500">AI Travel Safety &amp; Telemetry Command</text>
+  
+  <!-- Status Badges -->
+  <rect x="910" y="55" width="110" height="30" rx="15" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.4)"/>
+  <circle cx="926" cy="70" r="4" fill="#10b981"/>
+  <text x="938" y="75" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">AI ACTIVE</text>
+
+  <rect x="1030" y="55" width="100" height="30" rx="15" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)"/>
+  <text x="1052" y="75" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">GPS LIVE</text>
+
+  <!-- Left Card: Driver Vision & HUD -->
+  <rect x="50" y="120" width="360" height="505" rx="16" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="75" y="155" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Driver Attention HUD</text>
+  <text x="75" y="175" fill="#64748b" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">YOLOv8 Computer Vision Feed</text>
+  
+  <!-- Camera Feed Box -->
+  <rect x="75" y="195" width="310" height="170" rx="10" fill="#090d16" stroke="rgba(6,182,212,0.3)"/>
+  <!-- Facial Bounding Box -->
+  <rect x="180" y="225" width="100" height="110" rx="6" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="185" y="242" fill="#06b6d4" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">ATTENTIVE 98.4%</text>
+  <circle cx="215" cy="270" r="4" fill="#38bdf8"/>
+  <circle cx="245" cy="270" r="4" fill="#38bdf8"/>
+  <path d="M220 300 Q230 310 240 300" fill="none" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- Telemetry Metrics Gauges -->
+  <rect x="75" y="380" width="145" height="105" rx="10" fill="rgba(0,0,0,0.35)" stroke="rgba(255,255,255,0.05)"/>
+  <text x="90" y="405" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">SPEED (MPH)</text>
+  <text x="90" y="445" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800">64</text>
+  <text x="135" y="445" fill="#10b981" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">SAFE</text>
+
+  <rect x="240" y="380" width="145" height="105" rx="10" fill="rgba(0,0,0,0.35)" stroke="rgba(255,255,255,0.05)"/>
+  <text x="255" y="405" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">FATIGUE INDEX</text>
+  <text x="255" y="445" fill="#10b981" font-family="'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800">0.08</text>
+  <text x="325" y="445" fill="#10b981" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">LOW</text>
+
+  <!-- SOS Alert Status -->
+  <rect x="75" y="500" width="310" height="105" rx="10" fill="rgba(99,102,241,0.1)" stroke="rgba(99,102,241,0.3)"/>
+  <text x="95" y="528" fill="#a5b4fc" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">EMERGENCY ASSIST: STANDBY</text>
+  <text x="95" y="550" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">G-Force Impact Sensing: 0.12G (Normal)</text>
+  <text x="95" y="570" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">Automated SOS Protocol &amp; GPS Dispatch</text>
+
+  <!-- Center-Right: GPS Route Map & Safety Telemetry -->
+  <rect x="430" y="120" width="720" height="310" rx="16" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="460" y="155" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Live Geospatial Route Tracking</text>
+  <text x="460" y="175" fill="#64748b" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">Real-Time GPS Telemetry &amp; Waypoint Routing</text>
+
+  <!-- Map Background Simulation -->
+  <g opacity="0.25" stroke="#334155" stroke-width="1.5">
+    <path d="M460 220 H1120 M460 280 H1120 M460 340 H1120 M460 400 H1120"/>
+    <path d="M520 180 V410 M640 180 V410 M760 180 V410 M880 180 V410 M1000 180 V410"/>
+  </g>
+
+  <!-- Route Line Glow -->
+  <path d="M480 360 L580 360 L620 270 L800 270 L870 210 L1080 210" fill="none" stroke="#06b6d4" stroke-width="4" filter="url(#glow)"/>
+  <path d="M480 360 L580 360 L620 270 L800 270 L870 210 L1080 210" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  
+  <!-- Waypoints -->
+  <circle cx="480" cy="360" r="7" fill="#6366f1" stroke="#fff" stroke-width="2"/>
+  <circle cx="800" cy="270" r="7" fill="#10b981" stroke="#fff" stroke-width="2"/>
+  <circle cx="1080" cy="210" r="9" fill="#06b6d4" stroke="#fff" stroke-width="2.5" filter="url(#glow)"/>
+  
+  <!-- Vehicle Pin Tooltip -->
+  <rect x="730" y="215" width="140" height="42" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+  <text x="745" y="235" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">VEHICLE ACTIVE</text>
+  <text x="745" y="249" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">ETA: 24m &bull; Route Normal</text>
+
+  <!-- Bottom Analytics Strip -->
+  <rect x="430" y="450" width="720" height="175" rx="16" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="460" y="482" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700">Safety Score Trend &amp; Telemetry Analytics</text>
+  
+  <!-- Chart Line Graph -->
+  <path d="M460 580 L520 560 L580 570 L640 540 L700 550 L760 520 L820 535 L880 505 L940 515 L1000 495 L1080 500" fill="none" stroke="url(#cyanGrad)" stroke-width="3" filter="url(#glow)"/>
+  
+  <!-- Chart Bars -->
+  <rect x="490" y="560" width="16" height="40" rx="3" fill="rgba(6,182,212,0.4)"/>
+  <rect x="550" y="550" width="16" height="50" rx="3" fill="rgba(6,182,212,0.4)"/>
+  <rect x="610" y="530" width="16" height="70" rx="3" fill="rgba(6,182,212,0.5)"/>
+  <rect x="670" y="520" width="16" height="80" rx="3" fill="rgba(99,102,241,0.5)"/>
+  <rect x="730" y="510" width="16" height="90" rx="3" fill="rgba(99,102,241,0.6)"/>
+  <rect x="790" y="500" width="16" height="100" rx="3" fill="rgba(16,185,129,0.6)"/>
+  <rect x="850" y="495" width="16" height="105" rx="3" fill="rgba(16,185,129,0.7)"/>
+  <rect x="910" y="490" width="16" height="110" rx="3" fill="rgba(16,185,129,0.8)"/>
+  <rect x="970" y="485" width="16" height="115" rx="3" fill="rgba(16,185,129,0.9)"/>
+  <rect x="1030" y="480" width="16" height="120" rx="3" fill="url(#cyanGrad)"/>
+</svg>
