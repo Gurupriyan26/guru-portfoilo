@@ -1,21 +1,4 @@
 {
   "name": "guru-portfolio",
-  "version": "1.0.0",
-  "description": "Gurupriyan K — Modern Personal Portfolio Website",
-  "main": "index.html",
-  "scripts": {
-    "dev": "npx -y serve -l 3000 .",
-    "start": "npx -y serve -l 3000 .",
-    "serve": "npx -y serve ."
-  },
-  "keywords": [
-    "portfolio",
-    "developer",
-    "ai-ml",
-    "full-stack",
-    "nextjs",
-    "supabase"
-  ],
-  "author": "Gurupriyan K",
-  "license": "MIT"
+  "private": true
 }
