@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="medBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05101a"/>
+      <stop offset="50%" stop-color="#091b29"/>
+      <stop offset="100%" stop-color="#040b12"/>
+    </linearGradient>
+    <linearGradient id="medTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="medEmeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="medOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="medCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(15, 30, 48, 0.75)"/>
+      <stop offset="100%" stop-color="rgba(10, 20, 32, 0.85)"/>
+    </linearGradient>
+    <filter id="medGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Grid & Glows -->
+  <rect width="1200" height="675" fill="url(#medBgGrad)"/>
+  
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="240" y1="0" x2="240" y2="675"/>
+    <line x1="480" y1="0" x2="480" y2="675"/>
+    <line x1="720" y1="0" x2="720" y2="675"/>
+    <line x1="960" y1="0" x2="960" y2="675"/>
+  </g>
+
+  <!-- Ambient Glows -->
+  <circle cx="240" cy="120" r="200" fill="#0ea5e9" opacity="0.12" filter="url(#medGlow)"/>
+  <circle cx="1020" cy="180" r="220" fill="#10b981" opacity="0.12" filter="url(#medGlow)"/>
+
+  <!-- Top App Navigation Bar -->
+  <rect x="50" y="40" width="1100" height="60" rx="14" fill="url(#medCardGrad)" stroke="rgba(255,255,255,0.1)"/>
+  
+  <!-- Logo Icon -->
+  <rect x="75" y="52" width="36" height="36" rx="8" fill="url(#medTealGrad)"/>
+  <path d="M93 58 V82 M81 70 H105" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+  
+  <text x="125" y="76" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" letter-spacing="0.5">MedIndia EHR</text>
+  <text x="280" y="76" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500">Electronic Health Record &amp; ABDM Gateway</text>
+  
+  <!-- Status Badges -->
+  <rect x="880" y="55" width="130" height="30" rx="15" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.4)"/>
+  <circle cx="896" cy="70" r="4" fill="#f97316"/>
+  <text x="908" y="75" fill="#fb923c" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">ABDM SANDBOX</text>
+
+  <rect x="1025" y="55" width="105" height="30" rx="15" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.4)"/>
+  <circle cx="1040" cy="70" r="4" fill="#10b981"/>
+  <text x="1052" y="75" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">FHIR READY</text>
+
+  <!-- Left Card: Patient Registry & Clinical Vitals -->
+  <rect x="50" y="120" width="370" height="505" rx="16" fill="url(#medCardGrad)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="75" y="155" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Patient Registry &amp; ABHA ID</text>
+  <text x="75" y="175" fill="#64748b" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">Verified Demographic &amp; Vitals Profile</text>
+  
+  <!-- Patient Profile Box -->
+  <rect x="75" y="195" width="320" height="110" rx="12" fill="#07131e" stroke="rgba(14,165,233,0.3)"/>
+  <circle cx="115" cy="250" r="26" fill="#0ea5e9" opacity="0.2"/>
+  <text x="105" y="258" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800">RK</text>
+  <text x="155" y="235" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700">Rajesh Kumar (M, 42)</text>
+  <text x="155" y="255" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">ABHA: 91-8472-9102-3841</text>
+  <text x="155" y="275" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">Blood Group: B+ | OPD ID: #8492</text>
+
+  <!-- Vitals Cards Grid -->
+  <rect x="75" y="320" width="150" height="90" rx="10" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="90" y="342" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">HEART RATE</text>
+  <text x="90" y="380" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">72 <tspan font-size="12" font-weight="500" fill="#64748b">bpm</tspan></text>
+  <text x="90" y="398" fill="#10b981" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">● Normal</text>
+
+  <rect x="245" y="320" width="150" height="90" rx="10" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="260" y="342" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">BLOOD PRESSURE</text>
+  <text x="260" y="380" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">120/80</text>
+  <text x="260" y="398" fill="#10b981" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">● Optimal</text>
+
+  <rect x="75" y="425" width="150" height="90" rx="10" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="90" y="447" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">SPO2 OXYGEN</text>
+  <text x="90" y="485" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">99%</text>
+  <text x="90" y="503" fill="#10b981" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">● Stable</text>
+
+  <rect x="245" y="425" width="150" height="90" rx="10" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="260" y="447" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">BLOOD GLUCOSE</text>
+  <text x="260" y="485" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">105 <tspan font-size="12" font-weight="500" fill="#64748b">mg/dL</tspan></text>
+  <text x="260" y="503" fill="#10b981" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">● Fasting Normal</text>
+
+  <!-- ABDM Consent Status -->
+  <rect x="75" y="530" width="320" height="75" rx="10" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.25)"/>
+  <text x="95" y="555" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">ABDM CONSENT ARTIFACT: GRANTED</text>
+  <text x="95" y="575" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">Data Purpose: Care Management | Expiry: 2026-12-31</text>
+  <text x="95" y="592" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">HIP/HIU Token: Active FHIR Bundle Exchange</text>
+
+  <!-- Right Top Card: Clinical Timeline & Diagnostic Reports -->
+  <rect x="445" y="120" width="705" height="270" rx="16" fill="url(#medCardGrad)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="475" y="155" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Clinical Consultation Timeline &amp; EHR Records</text>
+  <text x="475" y="175" fill="#64748b" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">Interactive Electronic Health Records &amp; Diagnostic History</text>
+
+  <!-- Consultation Row 1 -->
+  <rect x="475" y="195" width="645" height="75" rx="10" fill="#071420" stroke="rgba(255,255,255,0.05)"/>
+  <circle cx="505" cy="232" r="14" fill="#0ea5e9" opacity="0.2"/>
+  <path d="M501 232 L504 235 L509 229" stroke="#38bdf8" stroke-width="2" fill="none"/>
+  <text x="530" y="225" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Cardiology Review &amp; Lipid Panel</text>
+  <text x="530" y="245" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">Dr. S. Sharma, MD &bull; Apollo Speciality Hospital</text>
+  <text x="530" y="260" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">Rx: Atorvastatin 10mg &bull; Lifestyle guidance provided</text>
+  <rect x="1010" y="215" width="90" height="26" rx="6" fill="rgba(14,165,233,0.15)" stroke="rgba(14,165,233,0.3)"/>
+  <text x="1025" y="232" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">COMPLETED</text>
+
+  <!-- Consultation Row 2 -->
+  <rect x="475" y="285" width="645" height="75" rx="10" fill="#071420" stroke="rgba(255,255,255,0.05)"/>
+  <circle cx="505" cy="322" r="14" fill="#10b981" opacity="0.2"/>
+  <path d="M501 322 L504 325 L509 319" stroke="#34d399" stroke-width="2" fill="none"/>
+  <text x="530" y="315" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Diagnostic Ultrasound &amp; Blood Panel</text>
+  <text x="530" y="335" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">MedIndia Diagnostics Lab &bull; Lab Order #9482-B</text>
+  <text x="530" y="350" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">Result: Normal sinus rhythm, HbA1c 5.6%</text>
+  <rect x="1010" y="305" width="90" height="26" rx="6" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.3)"/>
+  <text x="1030" y="322" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">VERIFIED</text>
+
+  <!-- Right Bottom Card: Digital Prescription & ABDM Data Exchange -->
+  <rect x="445" y="410" width="705" height="215" rx="16" fill="url(#medCardGrad)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="475" y="445" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Digital e-Prescription &amp; FHIR Health Record Pipeline</text>
+  
+  <rect x="475" y="465" width="310" height="135" rx="12" fill="#07131e" stroke="rgba(255,255,255,0.05)"/>
+  <text x="495" y="495" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Active e-Prescriptions</text>
+  <text x="495" y="520" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">1. Metformin 500mg (1-0-1 After Meals)</text>
+  <text x="495" y="542" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">2. Telmisartan 40mg (1-0-0 Morning)</text>
+  <text x="495" y="564" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">3. Multivitamin Complex (0-1-0 Noon)</text>
+  <text x="495" y="586" fill="#10b981" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">✓ Digitally Signed &amp; QR Verifiable</text>
+
+  <rect x="805" y="465" width="315" height="135" rx="12" fill="#07131e" stroke="rgba(255,255,255,0.05)"/>
+  <text x="825" y="495" fill="#fb923c" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">ABDM Integration Gateway</text>
+  <text x="825" y="520" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">● HIU Discovery &amp; Care Context Link</text>
+  <text x="825" y="540" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">● Encrypted FHIR JSON Health Bundle</text>
+  <text x="825" y="560" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="11">● Diffie-Hellman Key Exchange Protocol</text>
+  <text x="825" y="582" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">● 100% Client-Side Fallback Support</text>
+</svg>

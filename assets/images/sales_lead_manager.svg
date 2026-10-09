@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="apexBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="apexAmberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="apexBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="apexPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+    <linearGradient id="apexCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.75)"/>
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.85)"/>
+    </linearGradient>
+    <filter id="apexGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Grid & Glows -->
+  <rect width="1200" height="675" fill="url(#apexBgGrad)"/>
+  
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="240" y1="0" x2="240" y2="675"/>
+    <line x1="480" y1="0" x2="480" y2="675"/>
+    <line x1="720" y1="0" x2="720" y2="675"/>
+    <line x1="960" y1="0" x2="960" y2="675"/>
+  </g>
+
+  <!-- Ambient Glows -->
+  <circle cx="200" cy="140" r="220" fill="#f59e0b" opacity="0.12" filter="url(#apexGlow)"/>
+  <circle cx="1020" cy="180" r="240" fill="#38bdf8" opacity="0.12" filter="url(#apexGlow)"/>
+  <circle cx="600" cy="450" r="260" fill="#a855f7" opacity="0.08" filter="url(#apexGlow)"/>
+
+  <!-- Top App Navigation Bar -->
+  <rect x="50" y="40" width="1100" height="60" rx="14" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.1)"/>
+  
+  <!-- Logo Icon -->
+  <rect x="75" y="52" width="36" height="36" rx="8" fill="url(#apexAmberGrad)"/>
+  <path d="M85 74 L93 62 L101 74 Z" fill="#ffffff"/>
+  
+  <text x="125" y="76" fill="#ffffff" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="20" font-weight="800" letter-spacing="0.5">ApexLead AI</text>
+  <text x="260" y="76" fill="#94a3b8" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="14" font-weight="500">Enterprise Sales CRM &amp; Pipeline Intelligence</text>
+  
+  <!-- Top Bar Right Badges -->
+  <rect x="880" y="55" width="130" height="30" rx="15" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.4)"/>
+  <circle cx="896" cy="70" r="4" fill="#f59e0b"/>
+  <text x="908" y="75" fill="#fde68a" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600">AI Scoring: ON</text>
+
+  <rect x="1025" y="55" width="105" height="30" rx="15" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.4)"/>
+  <text x="1045" y="75" fill="#7dd3fc" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600">Kanban / Grid</text>
+
+  <!-- 4 KPI Summary Cards -->
+  <g transform="translate(50, 125)">
+    <!-- Card 1: Total Pipeline Value -->
+    <rect x="0" y="0" width="260" height="100" rx="12" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="32" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">TOTAL PIPELINE</text>
+    <text x="20" y="72" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800">$482,500</text>
+    <rect x="200" y="20" width="40" height="40" rx="8" fill="rgba(56,189,248,0.15)"/>
+    <text x="214" y="46" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700">$</text>
+
+    <!-- Card 2: Active Leads -->
+    <rect x="280" y="0" width="260" height="100" rx="12" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="300" y="32" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">ACTIVE LEADS</text>
+    <text x="300" y="72" fill="#f59e0b" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800">128 Leads</text>
+    <rect x="480" y="20" width="40" height="40" rx="8" fill="rgba(245,158,11,0.15)"/>
+    <circle cx="500" cy="40" r="8" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+
+    <!-- Card 3: AI Conversion Rate -->
+    <rect x="560" y="0" width="260" height="100" rx="12" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="580" y="32" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">WIN CONVERSION RATE</text>
+    <text x="580" y="72" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800">34.6%</text>
+    <rect x="760" y="20" width="40" height="40" rx="8" fill="rgba(16,185,129,0.15)"/>
+    <path d="M772 44 L780 34 L788 44" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Card 4: Urgent Follow-Ups -->
+    <rect x="840" y="0" width="260" height="100" rx="12" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="860" y="32" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">URGENT FOLLOW-UPS</text>
+    <text x="860" y="72" fill="#ec4899" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800">14 Overdue</text>
+    <rect x="1040" y="20" width="40" height="40" rx="8" fill="rgba(236,72,153,0.15)"/>
+    <circle cx="1060" cy="40" r="7" fill="#ec4899"/>
+  </g>
+
+  <!-- Interactive Kanban Pipeline View -->
+  <g transform="translate(50, 245)">
+    <!-- Column 1: New Qualified -->
+    <rect x="0" y="0" width="260" height="390" rx="12" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="15" y="15" width="230" height="34" rx="6" fill="rgba(56,189,248,0.12)"/>
+    <text x="25" y="37" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700">NEW INTAKE (12)</text>
+
+    <!-- Card 1.1 -->
+    <rect x="15" y="60" width="230" height="95" rx="8" fill="#1e293b" stroke="rgba(255,255,255,0.08)"/>
+    <text x="28" y="85" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">Sarah Jenkins</text>
+    <text x="28" y="103" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">Nexus Cloud Systems</text>
+    <rect x="28" y="115" width="60" height="20" rx="4" fill="rgba(56,189,248,0.2)"/>
+    <text x="35" y="129" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">$24,000</text>
+    <rect x="160" y="115" width="75" height="20" rx="4" fill="rgba(245,158,11,0.2)"/>
+    <text x="168" y="129" fill="#f59e0b" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">AI Score: 92</text>
+
+    <!-- Card 1.2 -->
+    <rect x="15" y="165" width="230" height="95" rx="8" fill="#1e293b" stroke="rgba(255,255,255,0.08)"/>
+    <text x="28" y="190" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">Marcus Vance</text>
+    <text x="28" y="208" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">AeroSpace Dynamics</text>
+    <rect x="28" y="220" width="60" height="20" rx="4" fill="rgba(56,189,248,0.2)"/>
+    <text x="35" y="234" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">$65,000</text>
+    <rect x="160" y="220" width="75" height="20" rx="4" fill="rgba(16,185,129,0.2)"/>
+    <text x="168" y="234" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">AI Score: 88</text>
+
+    <!-- Column 2: In Negotiation -->
+    <rect x="280" y="0" width="260" height="390" rx="12" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="295" y="15" width="230" height="34" rx="6" fill="rgba(192,132,252,0.12)"/>
+    <text x="305" y="37" fill="#c084fc" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700">INTERESTED &amp; DEMO (8)</text>
+
+    <!-- Card 2.1 -->
+    <rect x="295" y="60" width="230" height="95" rx="8" fill="#1e293b" stroke="rgba(255,255,255,0.08)"/>
+    <text x="308" y="85" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">Elena Rostova</text>
+    <text x="308" y="103" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">FinTech Core Inc</text>
+    <rect x="308" y="115" width="60" height="20" rx="4" fill="rgba(56,189,248,0.2)"/>
+    <text x="315" y="129" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">$48,000</text>
+    <rect x="440" y="115" width="75" height="20" rx="4" fill="rgba(192,132,252,0.2)"/>
+    <text x="448" y="129" fill="#c084fc" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">AI Score: 96</text>
+
+    <!-- Column 3: Follow-Up Scheduled -->
+    <rect x="560" y="0" width="260" height="390" rx="12" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="575" y="15" width="230" height="34" rx="6" fill="rgba(245,158,11,0.12)"/>
+    <text x="585" y="37" fill="#f59e0b" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700">FOLLOW-UP / NURTURE (19)</text>
+
+    <!-- Card 3.1 -->
+    <rect x="575" y="60" width="230" height="95" rx="8" fill="#1e293b" stroke="rgba(255,255,255,0.08)"/>
+    <text x="588" y="85" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">David K. Chen</text>
+    <text x="588" y="103" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">Pacific Logistics</text>
+    <rect x="588" y="115" width="60" height="20" rx="4" fill="rgba(56,189,248,0.2)"/>
+    <text x="595" y="129" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">$32,000</text>
+    <rect x="715" y="115" width="80" height="20" rx="4" fill="rgba(239,68,68,0.2)"/>
+    <text x="723" y="129" fill="#f87171" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">Today 2:00 PM</text>
+
+    <!-- Column 4: Converted Won -->
+    <rect x="840" y="0" width="260" height="390" rx="12" fill="url(#apexCardGrad)" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="855" y="15" width="230" height="34" rx="6" fill="rgba(16,185,129,0.12)"/>
+    <text x="865" y="37" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700">CONVERTED WON (45)</text>
+
+    <!-- Card 4.1 -->
+    <rect x="855" y="60" width="230" height="95" rx="8" fill="#1e293b" stroke="rgba(16,185,129,0.3)"/>
+    <text x="868" y="85" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">Horizon Health Systems</text>
+    <text x="868" y="103" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">Annual Enterprise Plan</text>
+    <rect x="868" y="115" width="70" height="20" rx="4" fill="rgba(16,185,129,0.2)"/>
+    <text x="876" y="129" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">$120,000</text>
+    <rect x="995" y="115" width="80" height="20" rx="4" fill="rgba(16,185,129,0.3)"/>
+    <text x="1005" y="129" fill="#6ee7b7" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">Won Deal</text>
+  </g>
+</svg>

@@ -295,8 +295,8 @@ function initModals() {
       image: 'assets/images/journey_guard.svg',
       category: 'AI / Computer Vision & IoT Safety Architecture (2025–2026)',
       stack: ['Python', 'Computer Vision (OpenCV)', 'YOLOv8', 'IoT & GPS Telemetry', 'Next.js', 'Supabase', 'Twilio / SOS API'],
-      githubUrl: 'https://github.com/Gurupriyan26',
-      liveUrl: 'https://github.com/Gurupriyan26',
+      githubUrl: 'https://github.com/Gurupriyan26/journeyguard-',
+      liveUrl: 'https://journeyguard.vercel.app',
       description: `
         A comprehensive travel safety and accident prevention platform engineered to protect drivers and passengers. By continuously monitoring driver alertness through computer vision and analyzing real-time vehicle telemetry, JourneyGuard proactively mitigates road hazards and accelerates emergency response times during critical incidents.
       `,
@@ -309,6 +309,47 @@ function initModals() {
       ],
       architecture: `
         Camera Video Feed &rarr; OpenCV / YOLOv8 Landmark Pipeline &rarr; Edge Anomaly Alert Engine &rarr; GPS Telemetry &rarr; Supabase Real-Time Backend &rarr; Emergency SOS Webhook &rarr; Next.js Command Dashboard.
+      `
+    },
+    medindia_ehr: {
+      title: 'MedIndia EHR: Mini Electronic Health Record & ABDM Platform',
+      image: 'assets/images/medindia_ehr.svg',
+      category: 'Healthcare Full-Stack & ABDM Ecosystem (2026)',
+      stack: ['React 18', 'TypeScript', 'Node.js', 'Express', 'Tailwind CSS', 'MongoDB', 'ABDM Sandbox', 'Vercel'],
+      githubUrl: 'https://github.com/Gurupriyan26/medindia-EHR-sample',
+      liveUrl: 'https://medindia-ehr-sample.vercel.app',
+      description: `
+        A modern, production-grade Mini Electronic Health Record (EHR) and Ayushman Bharat Digital Mission (ABDM) clinical platform built with React, TypeScript, Node.js, Express, and MongoDB. Engineered for seamless patient record management, digital prescriptions, and consent-driven healthcare data exchange.
+      `,
+      highlights: [
+        '<strong>Pre-loaded Clinical Patient History:</strong> Complete health records including diagnosis timeline, vitals telemetry (Heart Rate, BP, SpO2, Glucose), and lab diagnostic orders.',
+        '<strong>ABDM Sandbox Integration:</strong> ABHA ID generation, consent management workflows, and FHIR-compliant clinical data transfer protocols.',
+        '<strong>OPD & Clinical Care Management:</strong> Doctor consultation logs, digital e-prescriptions (e-Rx) with dosage schedules, and appointment tracking.',
+        '<strong>Zero-Config Client Fallback:</strong> Fully functional standalone client-side data simulator with instant deployment on Vercel and production-ready MongoDB backend integration.'
+      ],
+      architecture: `
+        React 18 / TypeScript UI &rarr; Express REST API &rarr; MongoDB / Mongoose Data Layer &rarr; ABDM Gateway / FHIR Bundle Serialization &rarr; Vercel CI/CD Deployment.
+      `
+    },
+    sales_lead_manager: {
+      title: 'ApexLead AI: Enterprise Sales Lead & Pipeline Manager',
+      image: 'assets/images/sales_lead_manager.svg',
+      category: 'Enterprise CRM & AI Pipeline Intelligence (2026)',
+      stack: ['JavaScript (ES6+)', 'Kanban Drag & Drop', 'AI Scoring Engine', 'HTML5 / CSS3', 'Glassmorphism UI', 'LocalStorage Engine', 'GitHub'],
+      githubUrl: 'https://github.com/Gurupriyan26/i-maje-sales-lead-manager-',
+      liveUrl: 'https://github.com/Gurupriyan26/i-maje-sales-lead-manager-',
+      description: `
+        An enterprise sales CRM and pipeline intelligence platform engineered for high-velocity sales teams. Features comprehensive lead lifecycle tracking, drag-and-drop Kanban state transitions, heuristic AI lead scoring, instant global search with keyboard navigation, and an automated overdue follow-up notification center.
+      `,
+      highlights: [
+        '<strong>Drag-and-Drop Kanban Board:</strong> Dynamic visual pipeline spanning 6 stages (New Intake, Contacted, Interested, Follow-Up, Converted, and Lost) with live state updates.',
+        '<strong>Heuristic AI Lead Scoring (0–100):</strong> Evaluates deal value, engagement channel, and urgency factors to surface high-probability conversion targets.',
+        '<strong>Follow-Up Alert Center:</strong> Notification center detecting overdue tasks and surfacing scheduled client touchpoints in real time.',
+        '<strong>Global Search & Hotkeys:</strong> Multi-parameter query indexing with "/" keyboard shortcuts, source filters, priority sorting, and CSV export/import.',
+        '<strong>Zero-Dependency Architecture:</strong> Pure vanilla ES6+ engine with client-side localStorage persistence for lightning-fast zero-latency interactions.'
+      ],
+      architecture: `
+        Event-Driven UI (Kanban / Grid) &rarr; AI Scoring & Heuristics Engine &rarr; Alert Notification Dispatcher &rarr; State & Filter Manager &rarr; LocalStorage Persistence Engine.
       `
     },
     robot: {
